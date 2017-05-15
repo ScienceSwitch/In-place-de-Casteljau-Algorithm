@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SplineView.h"
 
 @interface ViewController : UIViewController
 
