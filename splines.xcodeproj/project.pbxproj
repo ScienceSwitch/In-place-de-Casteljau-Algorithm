@@ -15,6 +15,7 @@
 		2193ADE91EBC8608003A1521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2193ADE71EBC8608003A1521 /* LaunchScreen.storyboard */; };
 		2193ADF41EBC8608003A1521 /* splinesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2193ADF31EBC8608003A1521 /* splinesTests.m */; };
 		2193ADFF1EBC8608003A1521 /* splinesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2193ADFE1EBC8608003A1521 /* splinesUITests.m */; };
+		2193AE0E1EBC891C003A1521 /* SplineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2193AE0D1EBC891C003A1521 /* SplineView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		218FD9261ECA17B800CB2A49 /* bezier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bezier.h; sourceTree = "<group>"; };
 		2193ADD61EBC8608003A1521 /* splines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2193ADDA1EBC8608003A1521 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2193ADDC1EBC8608003A1521 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		2193ADFA1EBC8608003A1521 /* splinesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = splinesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2193ADFE1EBC8608003A1521 /* splinesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = splinesUITests.m; sourceTree = "<group>"; };
 		2193AE001EBC8608003A1521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2193AE0C1EBC891C003A1521 /* SplineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplineView.h; sourceTree = "<group>"; };
+		2193AE0D1EBC891C003A1521 /* SplineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplineView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,9 @@
 				2193ADDD1EBC8608003A1521 /* AppDelegate.m */,
 				2193ADDF1EBC8608003A1521 /* ViewController.h */,
 				2193ADE01EBC8608003A1521 /* ViewController.m */,
+				218FD9261ECA17B800CB2A49 /* bezier.h */,
+				2193AE0C1EBC891C003A1521 /* SplineView.h */,
+				2193AE0D1EBC891C003A1521 /* SplineView.m */,
 				2193ADE21EBC8608003A1521 /* Main.storyboard */,
 				2193ADE51EBC8608003A1521 /* Assets.xcassets */,
 				2193ADE71EBC8608003A1521 /* LaunchScreen.storyboard */,
@@ -274,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2193ADE11EBC8608003A1521 /* ViewController.m in Sources */,
+				2193AE0E1EBC891C003A1521 /* SplineView.m in Sources */,
 				2193ADDE1EBC8608003A1521 /* AppDelegate.m in Sources */,
 				2193ADDB1EBC8608003A1521 /* main.m in Sources */,
 			);
@@ -509,6 +517,7 @@
 				2193AE051EBC8608003A1521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2193AE061EBC8608003A1521 /* Build configuration list for PBXNativeTarget "splinesTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +526,7 @@
 				2193AE081EBC8608003A1521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2193AE091EBC8608003A1521 /* Build configuration list for PBXNativeTarget "splinesUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +535,7 @@
 				2193AE0B1EBC8608003A1521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
