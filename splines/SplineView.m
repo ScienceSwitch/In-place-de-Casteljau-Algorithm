@@ -98,14 +98,27 @@ int iter_no = 3;    //default of 3
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSaveGState(context);
+    CGContextClearRect(context, rect);
+
     
-    CGContextSetFillColorWithColor(context, [UIColor lightGrayColor].CGColor);
-    CGContextFillRect(context, rect);
+    CGMutablePathRef path = CGPathCreateMutable();
+    int resW = [[UIScreen mainScreen] bounds].size.width;
+    int resH = [[UIScreen mainScreen] bounds].size.height;
+    for (int i = 0; i <= resW; i+=5){
+        CGPathMoveToPoint(path, NULL, i, 0);
+        CGPathAddLineToPoint(path, NULL, i, resH);
+    }
+    for (int i = 0; i <= resH; i+=5){
+        CGPathMoveToPoint(path, NULL, 0, i);
+        CGPathAddLineToPoint(path, NULL, resH, i);
+    }
+    CGContextAddPath(context, path);
+    CGContextSetLineWidth(context, 1.0);
+    [[UIColor darkGrayColor] setStroke];
+    CGContextDrawPath(context, kCGPathStroke);
+    
     CGContextSetLineCap(context, kCGLineCapSquare);
     CGContextSetLineWidth(context, 2.0);
-    
-
     CGContextSetStrokeColorWithColor(context, [UIColor cyanColor].CGColor);
     if (_points.count > 1){
         for (int i = 1; i<_points.count; i++){
@@ -125,7 +138,7 @@ int iter_no = 3;    //default of 3
         CGContextStrokePath(context);
     }
     
-    CGContextRestoreGState(context);
+    CGPathRelease(path);
 }
 //*/
 

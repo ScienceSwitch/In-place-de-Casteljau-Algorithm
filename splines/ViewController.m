@@ -28,11 +28,11 @@
     
     _iter_step = [[UIStepper alloc] init];
     [_iter_step setValue:_b_view.getIterationNumber];
-    [_iter_step setMinimumValue:0.0];
+    [_iter_step setMinimumValue:1.0];
     [_iter_step setMaximumValue:7.0];
     [_iter_step setStepValue:1.0];
     [_iter_step addTarget:self action:@selector(stepperChanged) forControlEvents:UIControlEventValueChanged];
-    [_iter_step setBackgroundColor:[UIColor greenColor]];
+    [_iter_step setTintColor:[UIColor greenColor]];
     
     _iter_label = [[UILabel alloc] init];
     [_iter_label setText:[[NSString alloc] initWithFormat:@"%d", [_b_view getIterationNumber]]];
