@@ -75,7 +75,7 @@ int iter_no = 3;    //default of 3
 - (void) runAlgorithm{
     if (_points.count == 4){
         CGPoint inputs[4] = {_points[0].point, _points[1].point, _points[2].point, _points[3].point};
-        const int output_n = 4+3*((int)pow(2, iter_no)-1);
+        const int output_n = output_size_for_4_points(iter_no);
         printf("Space allocated = %d\n", output_n);
         if (!_b_points || _b_points.count!=output_n)    //order is important here to avoid calling count on a NULL object
         {

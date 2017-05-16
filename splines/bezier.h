@@ -63,6 +63,10 @@ void subdivide_n (CGPoint input[], CGPoint output[], int iter_no, const int star
         output[i] = input[i];
     r_sub(output, iter_no, start);
 }
+
+int output_size_for_4_points(int iteration){
+    return 4+3*((int)pow(2, iteration)-1);
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #endif /* bezier_h */
