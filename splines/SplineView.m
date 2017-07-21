@@ -102,15 +102,15 @@ int iter_no = 3;    //default of 3
 
     
     CGMutablePathRef path = CGPathCreateMutable();
-    int resW = [[UIScreen mainScreen] bounds].size.width;
-    int resH = [[UIScreen mainScreen] bounds].size.height;
+    int resW = rect.size.width;
+    int resH = rect.size.height;
     for (int i = 0; i <= resW; i+=5){
         CGPathMoveToPoint(path, NULL, i, 0);
         CGPathAddLineToPoint(path, NULL, i, resH);
     }
     for (int i = 0; i <= resH; i+=5){
         CGPathMoveToPoint(path, NULL, 0, i);
-        CGPathAddLineToPoint(path, NULL, resH, i);
+        CGPathAddLineToPoint(path, NULL, resW, i);
     }
     CGContextAddPath(context, path);
     CGContextSetLineWidth(context, 1.0);
