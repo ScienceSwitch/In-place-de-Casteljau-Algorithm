@@ -34,18 +34,14 @@ int iter_no = 3;    //default of 3
 
 @property (nonatomic, strong) NSMutableArray<CPoint*>* points;          //CV Points
 @property (nonatomic, strong) NSMutableArray<CPoint*>* b_points;        //Bezier Points
-- (void) didReceiveTap:(UITapGestureRecognizer*) tapRecognizer;
 
 @end
 
 @implementation SplineView
 
-
-- (id) initWithFrame:(CGRect)frame{
-    if (self = [super initWithFrame:frame]){
+- (id) initWithCoder:(NSCoder *)aDecoder{
+    if (self = [super initWithCoder:aDecoder]){
         _points = [[NSMutableArray alloc] initWithCapacity:0];
-        UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didReceiveTap:)];
-        [self addGestureRecognizer:tap];
     }
     return self;
 }

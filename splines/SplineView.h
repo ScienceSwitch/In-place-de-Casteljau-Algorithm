@@ -13,5 +13,6 @@
 - (int) getIterationNumber;
 - (void) setIterationNumber:(int) iter;
 - (void) clearCanvas:(UIButton*) btn;
+- (void) didReceiveTap:(UITapGestureRecognizer*) tapRecognizer;
 
 @end

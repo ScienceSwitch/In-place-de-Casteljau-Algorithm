@@ -1,26 +1,90 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SplineView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USU-tT-Dpa">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="vtI-l0-uLI">
+                                        <rect key="frame" x="16" y="11" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Gfj-3P-N0W"/>
+                                        </connections>
+                                    </stepper>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFQ-6h-zn5">
+                                        <rect key="frame" x="118" y="15" width="10.5" height="21"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7I-FJ-0x0">
+                                        <rect key="frame" x="326" y="8.5" width="41" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GMj-MX-1a4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="vtI-l0-uLI" firstAttribute="leading" secondItem="USU-tT-Dpa" secondAttribute="leading" constant="16" id="07l-Vk-Xfd"/>
+                                    <constraint firstItem="PFQ-6h-zn5" firstAttribute="centerY" secondItem="USU-tT-Dpa" secondAttribute="centerY" id="5Ea-bd-SJ0"/>
+                                    <constraint firstAttribute="bottom" secondItem="vtI-l0-uLI" secondAttribute="bottom" constant="10" id="K94-vc-fDg"/>
+                                    <constraint firstItem="PFQ-6h-zn5" firstAttribute="leading" secondItem="vtI-l0-uLI" secondAttribute="trailing" constant="8" id="OoB-VZ-TY2"/>
+                                    <constraint firstAttribute="height" constant="50" id="WEo-9N-Ojv"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PFQ-6h-zn5" secondAttribute="bottom" id="afE-8n-Uji"/>
+                                    <constraint firstItem="PFQ-6h-zn5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="USU-tT-Dpa" secondAttribute="top" id="ezk-DF-tBe"/>
+                                    <constraint firstAttribute="trailing" secondItem="S7I-FJ-0x0" secondAttribute="trailing" constant="8" id="hqh-Nj-H4e"/>
+                                    <constraint firstItem="S7I-FJ-0x0" firstAttribute="centerY" secondItem="USU-tT-Dpa" secondAttribute="centerY" id="k14-GP-eES"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="USU-tT-Dpa" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="acC-3T-Dj4"/>
+                            <constraint firstItem="USU-tT-Dpa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i1P-ED-EzC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="USU-tT-Dpa" secondAttribute="bottom" id="unM-zi-ukV"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="jNW-WF-fHK" appends="YES" id="sme-aW-h6Z"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="b_view" destination="8bC-Xf-vdC" id="1mM-eX-lfi"/>
+                        <outlet property="clearBtn" destination="S7I-FJ-0x0" id="89b-rk-5xa"/>
+                        <outlet property="iter_label" destination="PFQ-6h-zn5" id="CH6-oE-LJc"/>
+                        <outlet property="iter_step" destination="vtI-l0-uLI" id="Mmj-7Q-FhJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jNW-WF-fHK">
+                    <connections>
+                        <action selector="receivedTap:" destination="BYZ-38-t0r" id="Ry6-qC-bVh"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="91.304347826086968"/>
         </scene>
     </scenes>
 </document>
